@@ -7,7 +7,8 @@
     "plugins": ["prettier-plugin-organize-imports"],
     "organizeImports": {
     "groups": [
-      ["builtin", "external"],
+      "builtin", 
+      "external",
       "internal",
       "parent",
       "sibling",
