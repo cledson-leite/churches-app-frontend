@@ -1,3 +1,4 @@
+import MainOrganism from '@/components/organisms';
 import styles from './BaseLayout.module.sass';
 
 type BaseLayoutProps = {
@@ -9,10 +10,7 @@ export default function BaseLayout({ children }: BaseLayoutProps) {
     <div role="container" className={styles.container}>
       <div className={styles.row  }>
         <nav>Menu</nav>
-        <div className={styles.main}>
-        <header>Header</header>
-        <main>{children}</main>
-        </div>  
+        <MainOrganism>{children}</MainOrganism>
       </div>
       <footer>Footer</footer>
     </div>
