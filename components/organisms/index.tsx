@@ -1,13 +1,19 @@
-import styles from './Main.organism.module.sass'
+'use client';
+
+import { usePathname } from 'next/navigation';
+import Header from '../molecules/Header';
+import styles from './Main.organism.module.sass';
 
 type MainOrganismProps = {
-  children: React.ReactNode
-}
+  children: React.ReactNode;
+};
 
-export default function MainOrganism({children}: MainOrganismProps) {
+export default function MainOrganism({ children }: MainOrganismProps) {
+  const path = usePathname();
+  console.log(path.split('/')[-1]);
   return (
     <div className={styles.container}>
-      <header >Header</header>
+      <Header>Header</Header>
       <main>{children}</main>
     </div>
   );
