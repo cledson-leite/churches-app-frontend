@@ -3,9 +3,35 @@
     "next/core-web-vitals",
     "plugin:prettier/recommended"
   ],
-  "plugins": ["prettier"],
+  "plugins": ["prettier", "boundaries"],
   "rules": {
     "prettier/prettier": "error",
-    "no-unused-vars": "off"
+    "no-unused-vars": "off",
+    "boundaries/element-types": [
+      "error",
+      {
+        "default": "disallow",
+        "rules": [
+          { "from": "app", "allow": ["viewmodels"] },
+          { "from": "components", "allow": ["viewmodels"] },
+          { "from": "viewmodels", "allow": ["models", "shared"] },
+          { "from": "models", "allow": ["api", "shared"] },
+          { "from": "api", "allow": ["shared"] }
+        ]
+      }
+    ]
+  },
+  "settings": {
+    "boundaries": {
+      "types": ["app", "components", "viewmodels", "models", "api", "shared"],
+      "files": [
+        { "pattern": "./src/app/**", "type": "app" },
+        { "pattern": "./src/components/**", "type": "components" },
+        { "pattern": "./src/viewmodels/**", "type": "viewmodels" },
+        { "pattern": "./src/models/**", "type": "models" },
+        { "pattern": "./src/api/**", "type": "api" },
+        { "pattern": "./src/shared/**", "type": "shared" }
+      ]
+    }
   }
 }
