@@ -7,12 +7,7 @@ const nextConfig: NextConfig = {
   reactStrictMode: true,
   sassOptions: {
     silenceDeprecations: ['legacy-js-api'],
-  },
-  pageExtensions: [
-        "page.tsx",
-        "page.ts",
-        "ts"
-    ],
+  }
 };
 
 export default withNextIntl(nextConfig);
