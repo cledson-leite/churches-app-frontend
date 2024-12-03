@@ -1,0 +1,34 @@
+name: develop pipeline
+on:
+  push:
+    branches:
+      - develop
+  pull_request:
+    branches:
+      - develop
+  marged:
+    branches:
+      - develop
+jobs:
+  run-tests:
+    name: Run Tests
+    runs-on: ubuntu-latest
+
+    steps:
+      # 1. Fazer checkout do código
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      # 2. Configurar a versão do Node.js (caso seja um projeto JS/TS)
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '20' # ou a versão específica do seu projeto
+
+      # 3. Instalar dependências
+      - name: Install Dependencies
+        run: npm install
+
+      # 4. Executar os testes unitários
+      - name: Run Unit Tests
+        run: npm run test:ci
