@@ -1,7 +1,7 @@
-import { act, render, screen } from "@testing-library/react";
-import Profile from ".";
-import { renderHook } from "@testing-library/react-hooks";
-import { useColapseStore } from "@/viewmodels/stores";
+import { useColapseStore } from '@/viewmodels/stores';
+import { act, render, screen } from '@testing-library/react';
+import { renderHook } from '@testing-library/react-hooks';
+import Profile from '.';
 
 describe('Profile Molecules', () => {
   it('Should display the components correctly', () => {
@@ -16,7 +16,7 @@ describe('Profile Molecules', () => {
     expect(btn).toBeInTheDocument();
   });
   it('Should hide profileInfo if it is collapsed true', () => {
-    const {result} = renderHook(() => useColapseStore())
+    const { result } = renderHook(() => useColapseStore());
     render(<Profile />);
     const name = screen.getByRole('name');
     const position = screen.getByRole('position');
@@ -25,9 +25,9 @@ describe('Profile Molecules', () => {
     expect(position).toBeInTheDocument();
     act(() => {
       result.current.setIsCollapsed(true);
-    })
+    });
     expect(result.current.isCollapsed).toBe(true);
     expect(name).not.toBeInTheDocument();
     expect(position).not.toBeInTheDocument();
   });
-})
+});

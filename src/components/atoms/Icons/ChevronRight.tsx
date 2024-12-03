@@ -1,4 +1,4 @@
-export  default function ChevronRight({...props}) {
+export default function ChevronRight({ ...props }) {
   return (
     <svg
       stroke="currentColor"

@@ -1,6 +1,6 @@
-import { render, screen } from "@testing-library/react";
-import ProfileInfo from ".";
-import { faker } from "@faker-js/faker";
+import { faker } from '@faker-js/faker';
+import { render, screen } from '@testing-library/react';
+import ProfileInfo from '.';
 
 describe('Profile Info Molecules', () => {
   it('Should display the full name and position passed in the parameters.', () => {
@@ -17,7 +17,7 @@ describe('Profile Info Molecules', () => {
     render(<ProfileInfo name="" position={position} />);
     const profileName = screen.getByRole('name');
     const profilePosition = screen.getByRole('position');
-    expect(profileName.textContent).toBe("Usuário");
+    expect(profileName.textContent).toBe('Usuário');
     expect(profilePosition.textContent).toBe(position);
   });
   it('Should display "membro" if position is not provided', () => {
@@ -26,6 +26,6 @@ describe('Profile Info Molecules', () => {
     const profileName = screen.getByRole('name');
     const profilePosition = screen.getByRole('position');
     expect(profileName.textContent).toBe(name);
-    expect(profilePosition.textContent).toBe("membro");
+    expect(profilePosition.textContent).toBe('membro');
   });
-})
+});

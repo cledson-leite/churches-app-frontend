@@ -1,7 +1,7 @@
-import {create} from 'zustand';
-import { User, UserStore } from './types'
+import { create } from 'zustand';
+import { User, UserStore } from './types';
 
-export const useUserStore = create<UserStore>((set) => ({
+export const useUserStore = create<UserStore>(set => ({
   user: {
     name: 'Cledson Leite',
     position: 'membro',

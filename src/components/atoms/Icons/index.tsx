@@ -1,9 +1,9 @@
-import ChevronLeft from "./ChevronLeft";
-import ChevronRight from "./ChevronRight";
+import ChevronLeft from './ChevronLeft';
+import ChevronRight from './ChevronRight';
 
 export const Icons = {
   Chevron: {
     Left: ChevronLeft,
-    Right: ChevronRight
+    Right: ChevronRight,
   },
-}
+};

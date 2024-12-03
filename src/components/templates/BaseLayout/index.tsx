@@ -1,10 +1,10 @@
-import Sidebar from "@/components/organisms/Sidebar";
+import Sidebar from '@/components/organisms/Sidebar';
 
-import styles from './BaseLayout.module.sass'
+import styles from './BaseLayout.module.sass';
 
 type Props = {
-  children: React.ReactNode
-}
+  children: React.ReactNode;
+};
 
 export default function BaseLayout({ children }: Props) {
   return (
