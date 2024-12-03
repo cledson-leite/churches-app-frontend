@@ -1,3 +1,5 @@
+export const dynamic = 'force-dynamic';
+
 import Intl from '@/components/atoms/Intl';
 
 export default function Finance() {

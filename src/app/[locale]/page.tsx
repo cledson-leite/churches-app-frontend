@@ -1,4 +1,5 @@
 'use client';
+export const dynamic = 'force-dynamic';
 
 import { redirect, useParams } from 'next/navigation';
 
