@@ -1,8 +1,7 @@
 import '@testing-library/jest-dom';
 
+import { faker } from '@faker-js/faker';
 import { render, screen } from '@testing-library/react';
-import {faker} from '@faker-js/faker';
-
 
 import Avatar from '.';
 
@@ -18,7 +17,7 @@ describe('Avatar atoms', () => {
     );
   });
   it('Should display image provided by imgsrc', () => {
-     render(<Avatar imgSrc={img} />);
+    render(<Avatar imgSrc={img} />);
     const image = screen.getByRole('img');
     const formatImg = img.replaceAll(':', '%3A').replaceAll('/', '%2F');
     expect(image).toHaveAttribute(
@@ -27,7 +26,7 @@ describe('Avatar atoms', () => {
     );
   });
   it('Should display default image if imgsrc is invalid', () => {
-    render(<Avatar imgSrc='anything' />);
+    render(<Avatar imgSrc="anything" />);
     const image = screen.getByRole('img');
 
     expect(image).toHaveAttribute(

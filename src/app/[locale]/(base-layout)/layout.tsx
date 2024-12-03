@@ -1,5 +1,9 @@
-import BaseLayout from "@/components/templates/BaseLayout";
+import BaseLayout from '@/components/templates/BaseLayout';
 
-export default function Baselayout({ children }: { children: React.ReactNode }) {
+export default function Baselayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return <BaseLayout>{children}</BaseLayout>;
 }

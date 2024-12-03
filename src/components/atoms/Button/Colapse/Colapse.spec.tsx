@@ -6,7 +6,7 @@ import Colapse from '.';
 
 describe('Colapse atoms', () => {
   it('Should render the correct icon based on isCollapsed', () => {
-     render(<Colapse isCollapsed={false} setIsCollapsed={() => {}} />);
+    render(<Colapse isCollapsed={false} setIsCollapsed={() => {}} />);
     const left = screen.getByTitle('chevron-left');
     const right = screen.queryByTitle('chevron-right');
 

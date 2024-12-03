@@ -1,8 +1,8 @@
-'use client'
+'use client';
 
 import Profile from '@/components/molecules/Profile';
-import  styles from './Sidebar.module.sass'
 import { useColapseStore } from '@/viewmodels/stores';
+import styles from './Sidebar.module.sass';
 
 export default function Sidebar() {
   const { isCollapsed } = useColapseStore();
