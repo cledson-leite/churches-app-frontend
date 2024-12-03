@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 
 import avatarDefault from "../../../../public/images/avatarDefault.png";
 
@@ -8,9 +8,15 @@ type Props = {
   imgSrc?: string;
 }
 export default function Avatar({ imgSrc }: Props) {
+  let img: StaticImageData | string;
+  if (imgSrc?.startsWith('https://') || imgSrc?.startsWith('http://')) {
+    img = imgSrc;
+  } else {
+    img = avatarDefault;
+  }
   return (
     <Image
-      src={!imgSrc ? avatarDefault : imgSrc}
+      src={img}
       alt="profile"
       width={52}
       height={52}

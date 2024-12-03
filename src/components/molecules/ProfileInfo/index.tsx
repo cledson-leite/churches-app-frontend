@@ -7,8 +7,12 @@ type Props = {
 export default function ProfileInfo({ name, position }: Props) {
   return (
     <div className={styles['name-job']}>
-      <div className={styles.name}>{name}</div>
-      <div className={styles.position}>{position}</div>
+      <div role="name" className={styles.name}>
+        {!name ? "Usuário" : name}
+      </div>
+      <div role="position" className={styles.position}>
+        {!position ? "membro" : position}
+      </div>
     </div>
   );
 }
