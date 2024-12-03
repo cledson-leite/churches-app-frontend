@@ -1,4 +1,8 @@
-module.exports = {
+const nextJest = require("next/jest");
+const createJestConfig = nextJest({
+  dir: "./",
+});
+const customJestConfig = {
   transform: {
     '^.+\\.(js|jsx|ts|tsx)$': '@swc/jest',
   },
@@ -10,3 +14,6 @@ module.exports = {
     '\\.(css|less|scss|sass)$': 'identity-obj-proxy',
   },
 };
+
+
+module.exports = createJestConfig(customJestConfig);
