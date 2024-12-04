@@ -1,12 +1,11 @@
-
-import Link from "next/link";
 import { SubRoute } from '@/shared/types';
+import Link from 'next/link';
 
 import styles from './NavHeader.module.sass';
 
 type Props = {
-  routes: SubRoute[]
-}
+  routes: SubRoute[];
+};
 
 export default function NavHeader({ routes }: Props) {
   return (

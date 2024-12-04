@@ -9,11 +9,11 @@ const subItems: SubRoute[] = [
     label: 'Receitas',
     href: '/finance/revenues',
   },
-]
+];
 
 export const finance: Route = {
   icon: 'Money',
   label: 'Financeiro',
   href: '/finance',
-  subItems
+  subItems,
 };
