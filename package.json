@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "test:ci": "jest --ci --lastCommit --passWithNoTests --runInBand"
+    "test": "jest --passWithNoTests --runInBand"
   },
   "dependencies": {
     "@testing-library/react-hooks": "^8.0.1",

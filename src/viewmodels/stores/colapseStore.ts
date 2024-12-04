@@ -2,6 +2,6 @@ import { create } from 'zustand';
 import { ColapseStore } from './types';
 
 export const useColapseStore = create<ColapseStore>(set => ({
-  isCollapsed: false,
+  isCollapsed: true,
   setIsCollapsed: (value: boolean) => set({ isCollapsed: value }),
 }));
