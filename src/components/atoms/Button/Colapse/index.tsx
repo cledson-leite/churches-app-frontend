@@ -12,9 +12,9 @@ export default function Colapse({ isCollapsed, setIsCollapsed }: Props) {
   return (
     <button className={styles.colapseBtn} onClick={handleClick}>
       {isCollapsed ? (
-        <Icons.Chevron.Right className={styles.icon} title="chevron-right" />
+        <Icons.ChevronRight className={styles.icon} title="chevron-right" />
       ) : (
-        <Icons.Chevron.Left className={styles.icon} title="chevron-left" />
+        <Icons.ChevronLeft className={styles.icon} title="chevron-left" />
       )}
     </button>
   );
