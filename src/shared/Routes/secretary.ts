@@ -1,3 +1,7 @@
-import { Route } from "../types";
+import { Route } from '../types';
 
-export const secretary: Route =  {icon: 'Docs', label: 'Secretária', href: '/secretary'}
+export const secretary: Route = {
+  icon: 'Docs',
+  label: 'Secretária',
+  href: '/secretary',
+};

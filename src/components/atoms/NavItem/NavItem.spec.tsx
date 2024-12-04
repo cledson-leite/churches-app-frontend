@@ -1,6 +1,6 @@
-import { render, renderHook, screen, act} from "@testing-library/react";
-import { useColapseStore } from "@/viewmodels/stores";
-import NavItem from ".";
+import { useColapseStore } from '@/viewmodels/stores';
+import { act, render, renderHook, screen } from '@testing-library/react';
+import NavItem from '.';
 
 describe('NavItem atoms', () => {
   it('Should display default components for is collapsed true', () => {
@@ -29,10 +29,10 @@ describe('NavItem atoms', () => {
     icon = screen.getByRole('icon');
     label = screen.queryByRole('label');
     tips = screen.queryByRole('tips');
-    
+
     expect(result.current.isCollapsed).toBeFalsy();
     expect(icon).toBeInTheDocument();
     expect(label).toBeInTheDocument();
     expect(tips).toBeNull();
   });
-})
+});
