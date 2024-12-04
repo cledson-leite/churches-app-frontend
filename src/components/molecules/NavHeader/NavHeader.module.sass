@@ -1,0 +1,23 @@
+.container
+  display: flex
+  align-items: center
+  justify-content: center
+  gap: 1.25em
+  width: 100%
+
+.link
+  position: relative
+  font-size: 1.25em
+  color: var(--text-light-background)
+  text-decoration: none
+  transition: all 0.4s ease
+
+  &:hover::after
+    content: ''
+    position: absolute
+    bottom: -0.25em
+    left: 0
+    width: 100%
+    height: 0.25em
+    background-color: var(--accent-color)
+    border-radius: 0.25em
