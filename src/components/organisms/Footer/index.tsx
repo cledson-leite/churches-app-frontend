@@ -1,5 +1,3 @@
-import Link from 'next/link';
-
 import { Icons } from '@/components/atoms/Icons';
 import styles from './Footer.module.sass';
 
@@ -8,19 +6,26 @@ export default function Footer() {
     <footer className={styles.container}>
       <h3 className={styles.company}>Silvia Family Tech Solutions </h3>
       <div className={styles.contact}>
-        <Link
+        <a
           className={styles.link}
           href="https://www.linkedin.com/in/cledson-leite/"
+          target="_blank"
+          rel="noreferrer noopener"
         >
           <Icons.Linkedin className={`${styles.icon} ${styles.linkedin}`} />
-        </Link>
-        <Link className={styles.link} href="https://github.com/cledson-leite">
+        </a>
+        <a
+          className={styles.link}
+          href="https://github.com/cledson-leite"
+          target="_blank"
+          rel="noreferrer noopener"
+        >
           <Icons.Github className={styles.icon} />
-        </Link>
+        </a>
       </div>
-      <Link className={styles.email} href="csbetsonline@gmail.com">
+      <a className={styles.email} href="mailto:csbetsonline@gmail.com">
         Cledson Leite
-      </Link>
+      </a>
     </footer>
   );
 }
