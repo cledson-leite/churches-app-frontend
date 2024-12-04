@@ -1,5 +1,5 @@
-import { render, screen } from "@testing-library/react";
-import ListItems from ".";
+import { render, screen } from '@testing-library/react';
+import ListItems from '.';
 
 describe('ListItem Molecules', () => {
   it('Should display the components correctly', () => {
@@ -7,4 +7,4 @@ describe('ListItem Molecules', () => {
     const children = screen.getAllByRole('listitem');
     expect(children).toHaveLength(4);
   });
-})
+});
