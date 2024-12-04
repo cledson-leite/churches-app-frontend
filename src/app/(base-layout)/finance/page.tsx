@@ -1,5 +1,4 @@
-import { redirect } from 'next/navigation';
-
+import styles from './Finance.module.sass';
 export default function Finance() {
-  redirect('/finance/dashboard');
+  return <h1 className={styles.container}>Finance</h1>;
 }
