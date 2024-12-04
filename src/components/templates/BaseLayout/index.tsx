@@ -1,5 +1,6 @@
 import Sidebar from '@/components/organisms/Sidebar';
 
+import Footer from '@/components/organisms/Footer';
 import Header from '@/components/organisms/Header';
 import styles from './BaseLayout.module.sass';
 
@@ -14,7 +15,7 @@ export default function BaseLayout({ children }: Props) {
       <main className={styles.main}>
         <Header />
         {children}
-        <div>Footer</div>
+        <Footer />
       </main>
     </div>
   );
