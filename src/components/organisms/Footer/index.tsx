@@ -1,5 +1,3 @@
-import Link from 'next/link';
-
 import { Icons } from '@/components/atoms/Icons';
 import styles from './Footer.module.sass';
 
@@ -25,10 +23,7 @@ export default function Footer() {
           <Icons.Github className={styles.icon} />
         </a>
       </div>
-      <a
-        className={styles.email}
-        href="mailto:csbetsonline@gmail.com"
-      >
+      <a className={styles.email} href="mailto:csbetsonline@gmail.com">
         Cledson Leite
       </a>
     </footer>
