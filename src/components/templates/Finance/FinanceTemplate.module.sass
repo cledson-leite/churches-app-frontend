@@ -1,0 +1,29 @@
+.container
+  position: relative
+  display: flex
+  align-self: center
+  justify-content: flex-start
+  flex-direction: column
+  width: 90%
+  height: 100%
+  background-color: var(--background-primary)
+  border-radius: 0.25em
+  margin: 1em 0
+  padding: 0.5em
+
+  // Ajustes para dispositivos móveis (phone)
+  @media (max-width: 599px)
+    width: 100%
+    padding: 1em
+    margin: 0.5em 0
+
+  // Ajustes para tablets
+  @media (min-width: 600px) and (max-width: 1023px)
+    padding: 0.75em
+    margin: 0.75em 0
+
+
+  // Ajustes para desktops
+  @media (min-width: 1024px)
+    padding: 1em
+    margin: 1em 0

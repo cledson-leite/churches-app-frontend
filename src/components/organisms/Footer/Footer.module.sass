@@ -1,18 +1,36 @@
 .container
   display: flex
   align-items: center
-  
   justify-content: space-between
   width: 100%
   height: 72px
   padding: 0 1.5em
+  background-color: var(--background-primary)
   box-shadow: 0.25em -0.25em 0.5em rgba(0, 0, 0, 0.4)
+
+  // Ajustes para dispositivos móveis (phone)
+  @media (max-width: 599px)
+    // flex-direction: column
+    height: auto
+    padding: 1em
+
+  // Ajustes para tablets
+  @media (min-width: 600px) and (max-width: 1023px)
+    flex-direction: row
+    height: 60px
+    padding: 0 1em
+
+  // Ajustes para desktops
+  @media (max-width: 1024px)
+    height: 72px
+    padding: 0 1.5em
+
 
 .author
   display: flex
   align-items: center
   color: var(--text-light-background)
-   font-size: 1em
+  font-size: 1em
   gap: 1em
 
 .company
@@ -21,6 +39,9 @@
   color: var(--error-color)
   font-size: 1.25em
   gap: 1em
+
+  @media (max-width: 599px)
+    display: none
 
 .email
   font-size: 1.25em

@@ -11,3 +11,30 @@ export type Route = {
   href: string;
   subItems?: SubRoute[];
 };
+
+export const Months = {
+  Jan: 'Janeiro',
+  Feb: 'Fevereiro',
+  Mar: 'Março',
+  Apr: 'Abril',
+  May: 'Maio',
+  Jun: 'Junho',
+  Jul: 'Julho',
+  Aug: 'Agosto',
+  Sep: 'Setembro',
+  Oct: 'Outubro',
+  Nov: 'Novembro',
+  Dec: 'Dezembro',
+};
+export type Month = {
+  [key in keyof typeof Months]: {
+    revenues: number;
+    expenses: number;
+  };
+};
+
+export type Totals = {
+  revenues: number;
+  expenses: number;
+  balance: number;
+};
