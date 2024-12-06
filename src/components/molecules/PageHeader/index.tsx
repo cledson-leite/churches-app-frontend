@@ -1,10 +1,10 @@
 'use client';
 
-import { usePathname } from "next/navigation";
-import { Routes } from "@/shared/Routes";
-import Title from "@/components/atoms/Title";
+import Title from '@/components/atoms/Title';
+import { Routes } from '@/shared/Routes';
+import { usePathname } from 'next/navigation';
 
-import styles from "./PageHeader.module.sass";
+import styles from './PageHeader.module.sass';
 
 export default function PageHeader() {
   const pathname = usePathname();

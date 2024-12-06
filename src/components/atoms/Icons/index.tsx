@@ -27,5 +27,5 @@ export const Icons = {
   MoneyBill,
   Swap,
   Calculator,
-  Plus
+  Plus,
 };
