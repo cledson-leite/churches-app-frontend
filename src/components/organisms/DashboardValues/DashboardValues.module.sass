@@ -1,0 +1,42 @@
+.container
+  display: flex
+  flex-direction: column
+  align-items: center
+  justify-content: space-between
+  width: 100%
+  height: auto
+  padding: 0.5em
+  gap: 1em
+
+  @media (max-width: 399px)
+    flex-direction: column
+    height: auto
+    padding: 0.5em
+    gap: 1em
+
+  @media (min-width: 400px) and (max-width: 599px)
+    flex-direction: column
+    height: auto
+    padding: 0.5em
+    gap: 1em
+
+
+  // Ajustes para tablets
+  @media (min-width: 600px) and (max-width: 900px)
+    flex-direction: column
+    width: 100%
+    padding: 0.5em 1em
+    gap: 1em
+
+
+  // Ajustes para desktops
+  @media (min-width: 1024px)
+    flex-direction: row
+    height: 100%
+    padding: 0
+
+  @media (min-width: 1280px)
+    height: 100%
+    padding: 0
+    
+

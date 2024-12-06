@@ -1,4 +1,5 @@
-import styles from './Finance.module.sass';
-export default function Finance() {
-  return <h1 className={styles.container}>Finance</h1>;
+import FinanceTemplate from "@/components/templates/Finance";
+
+export default function Page() {
+  return <FinanceTemplate />
 }
