@@ -1,8 +1,8 @@
 'use client';
 
-import { usePathname } from 'next/navigation';
 import { Routes } from '@/shared/Routes';
 import { useFinanceStore } from '@/viewmodels/stores/useFinanceStore';
+import { usePathname } from 'next/navigation';
 
 import CardValue from '@/components/molecules/CardValue';
 

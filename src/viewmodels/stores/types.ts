@@ -1,5 +1,4 @@
-import Finance from '../../app/(base-layout)/finance/page';
-import { Month, Months, Totals } from '../../shared/types';
+import { Month, Totals } from '../../shared/types';
 export type User = {
   name: string;
   position: string;
@@ -17,10 +16,9 @@ export type ColapseStore = {
 };
 
 export type FinanceData = {
-  totals: Totals,
-    perMonth: Month
-}
-
+  totals: Totals;
+  perMonth: Month;
+};
 
 export type FinanceStore = {
   data: FinanceData;

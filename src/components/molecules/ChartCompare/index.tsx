@@ -2,18 +2,22 @@
 
 import { Months } from '@/shared/types';
 import { useFinanceStore } from '@/viewmodels/stores/useFinanceStore';
-import styles from './ChartCompare.module.sass';
 import React from 'react';
+import styles from './ChartCompare.module.sass';
 
 export default function ChartCompare() {
   const { data } = useFinanceStore();
   const months = data?.perMonth || {};
-  const indece = Math.round((data?.totals?.revenues / (data?.totals?.expenses + data?.totals?.revenues)) * 100);
+  const indece = Math.round(
+    (data?.totals?.revenues /
+      (data?.totals?.expenses + data?.totals?.revenues)) *
+      100,
+  );
   console.log(indece);
   return (
     <div className={styles.container}>
       {Object.entries(months).map(([key, value], index) => (
-        <div className={styles.graph}>
+        <div key={index} className={styles.graph}>
           <div className={styles.series}>
             <div
               key={index}

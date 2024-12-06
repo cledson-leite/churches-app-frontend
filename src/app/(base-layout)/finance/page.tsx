@@ -1,5 +1,5 @@
-import FinanceTemplate from "@/components/templates/Finance";
+import FinanceTemplate from '@/components/templates/Finance';
 
 export default function Page() {
-  return <FinanceTemplate />
+  return <FinanceTemplate />;
 }
