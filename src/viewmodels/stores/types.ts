@@ -1,3 +1,5 @@
+import Finance from '../../app/(base-layout)/finance/page';
+import { Month, Months, Totals } from '../../shared/types';
 export type User = {
   name: string;
   position: string;
@@ -12,4 +14,15 @@ export type UserStore = {
 export type ColapseStore = {
   isCollapsed: boolean;
   setIsCollapsed: (isCollapsed: boolean) => void;
+};
+
+export type FinanceData = {
+  totals: Totals,
+    perMonth: Month
+}
+
+
+export type FinanceStore = {
+  data: FinanceData;
+  setData: (data: FinanceData) => void;
 };
